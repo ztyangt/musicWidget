@@ -17,6 +17,7 @@
   const playMode = document.querySelector("#music-play-mode")
   const modeIcon = document.querySelector("#play-mode-icon")
   const showMode = document.querySelector("#music-show-mode")
+  const swListBtn = document.querySelector("#switch-music-list")
 
   const size = {
     liHeight: 25,
@@ -26,6 +27,7 @@
   const modeIconArr = ["icon-xunhuanbofang", "icon-suijibofang", "icon-danquxunhuan"]
   const showModeArr = ["icon-bofangliebiao", "icon-geciweidianji"]
 
+  let listIndex = 0
   let hasLyric = false
   let showIndex = 0
   let modeIndex = 0
@@ -241,6 +243,13 @@
     }
   })
 
-
+  swListBtn.addEventListener("click", function (e) {
+    if (listIndex === musicConfig.length - 1) {
+      listIndex = 0
+    } else {
+      listIndex += 1
+    }
+    initMusic(musicConfig[listIndex].id, musicConfig[listIndex].type)
+  })
 
 })();
