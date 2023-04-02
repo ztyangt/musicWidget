@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+  <title>音乐播放组件</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3952969_t38rikukvph.css">
+  <script src="assets/config.js"></script>
+</head>
+<body>
+
+  <div class="music-container">
+    <div id="music-wrapper" class="music-wrapper blur">
+      <div class="music-bg-cover"></div>
+      <div class="play-wrapper">
+        <div class="music-info">
+          <div class="music-title">歌曲名字</div>
+          <span class="music-singer">歌手</span>
+        </div>
+
+        <div class="music-controls">
+          <div class="music-control-btns">
+            <button id="music-play-mode" >
+              <i id="play-mode-icon" class="iconfont icon-xunhuanbofang"></i>
+            </button>
+            <button id="music-prev" >
+              <i class="iconfont icon-shangyiqu"></i>
+            </button>
+            <button id="music-play" >
+              <i class="iconfont icon-bofang"></i>
+            </button>
+            <button id="music-pause" class="disnone">
+              <i class="iconfont icon-pause-circle"></i>
+            </button>
+            <button id="music-next" >
+              <i class="iconfont icon-xiayiqu"></i>
+            </button>
+            <button id="music-next" >
+              <i id="music-show-mode" class="iconfont icon-bofangliebiao"></i>
+            </button>
+          </div>
+
+          <div class="music-control-bottom">
+            <div id="time-slider-box" class="time-slider-box">
+              <div class="time-slider-wrapper">
+                <span class="music-time-start">00:00</span>
+                <span class="music-time-end">00:00</span>
+                <div id="time-slider-line" class="time-slider-line transform">
+                  <span class="music-line-btn"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music-info-panel">
+        <div class="lyric-wrapper">
+          <ul id="lyric-wrapper" class="transform"></ul>
+        </div>
+        <div class="song-list-wrapper">
+          <ul id="song-list"></ul>
+        </div>
+
+      </div>
+        
+    </div>
+  </div>
+
+  
+</body>
+<script src="assets/music.js"></script>
+</html>
